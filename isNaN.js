@@ -5,3 +5,10 @@ if (!Number.isNaN) {
 		)
 	}
 }
+
+// 利用 NaN 不等于自身
+if (!Number.isNaN) {
+	Number.isNaN = function (n) {
+		return n !== n
+	}
+}
